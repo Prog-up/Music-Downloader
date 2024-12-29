@@ -14,8 +14,7 @@ DL_PID=$!
 zenity --info \
     --title="Downloading music" \
     --text="Downloading in progress...\nPlease wait.\n\nTo stop dowloads, close the Terminal." \
-    --width=200 \
-    --timeout=1 &
+    --width=200 &
 ZENITY_PID=$!
 
 # Clean up
@@ -25,5 +24,5 @@ kill $ZENITY_PID 2>/dev/null
 # Show completion message
 zenity --info \
     --title="Complete" \
-    --text="Music dowload finished." \
+    --text="Music download complete." \
     --width=200
